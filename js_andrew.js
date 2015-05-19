@@ -21,7 +21,7 @@
 // console.log(addNumbers([1, 2, 3, 4, 5]));
 //
 // function addNumbers(array) {
-//   return array.reduce(function(first, second) {
+//   return array.reduce(function(first, second) {{}
 //     return first + second;
 //   })
 // }

@@ -4,8 +4,10 @@
 var noDuplicates = [];
 var removeDuplicates = function(array) {
   for (i = 0; i < array.length; i++) {
-    if (array[i] !== )
+    if (array[i] !== -1);
+    noDuplicates.push(array[i]);
   }
+  return noDuplicates
 }
 
 
