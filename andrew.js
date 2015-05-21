@@ -130,3 +130,58 @@ function take(array, numberToTake) {
 }
 console.log(take([1, 2, 3, 4, 5, 0], 3))
 console.log(take([1, 2, 3, 4, 5, 0], 30))
+
+// Pick 1 method from a string and 1 from the enumerables and have them ready by the morning.
+// function max(array) {
+//   for (var i = 0; i < array.length; i++) {
+//     if (array[i] < array[i + 1]) {
+//   }
+// }
+//
+
+// function minMax(array) {
+//   var results = [];
+//   array.forEach(function(elem) {
+//     if (array(elem) > array(elem + 1))
+//     results.push(elem)
+//   })
+// }
+//
+// console.log(minMax([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+// console.log(minMax(["dog", "cat", "horse", "pig"]))
+
+function squeeze(string) {
+  var results = [];
+  var stringSplit = string.split(' ');
+  for (var i = 0; i < string.length; i++) {
+    if (string[i] !== string[i + 1]) {
+      results.push(string[i])
+    }
+  }
+    return results.join('')
+}
+console.log(squeeze("hello dood"))
+
+function rejectFn(array, rejectFn) {
+  var results = [];
+    for (var i = 0; i < array.length; i++)
+      if (rejectFn(array[i]) === true) {
+        results.push(array[i]);
+      }
+      return results;
+    }
+console.log(rejectFn([1, 2, 3, 4], function(n) {return n < 2}));
+
+function partition(array, conditionFn) {
+  var results = [];
+  var falseResults = [];
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      results.push(array[i])
+    } else {
+      results.push(array[i]);
+    }
+    return results + "," + "[" + falseResults + "]"
+  }
+}
+console.log(partition([1, 2, 3, 4, 5, 6], function(i) { return i % 2 }))
